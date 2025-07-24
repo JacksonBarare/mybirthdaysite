@@ -1,0 +1,91 @@
+.rsvp-section {
+  padding: 4rem 6rem;
+  background-color: #f4dfd3;;
+  color: #3b0060;
+  font-family: 'Arial', sans-serif;
+}
+
+.rsvp-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.rsvp-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.location-info,
+.rsvp-form {
+  flex: 1 1 300px;
+  max-width: 48%;
+}
+
+.location-info h3,
+.rsvp-form h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #5a005a;
+}
+
+.location-info p,
+.map-link {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #3b0060;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #3b0060;
+  font-weight: bold;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.rsvp-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #f9d5c0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.rsvp-form button {
+  background-color: #3b0060;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rsvp-form button:hover {
+  background-color: #5a0080;
+}
+
+@media (max-width: 768px) {
+  .rsvp-container {
+    flex-direction: column;
+  }
+
+  .location-info,
+  .rsvp-form {
+    max-width: 100%;
+  }
+}

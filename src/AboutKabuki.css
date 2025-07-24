@@ -1,0 +1,94 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row; /* image on left, text on right */
+  padding: 4rem 6rem;
+  background-color: #f9d5c0; /* same peach as hero */
+  color: #3b0060;
+  gap: 3rem;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.about-image-container {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 3 / 4; /* keeps images consistently sized */
+  object-fit: cover;
+  border-radius: 15px;
+  border: 6px solid white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: opacity 1s ease-in-out;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #3b0060;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #5a005a;
+}
+
+.about-button {
+  background-color: #3b0060;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #5a0080;
+}
+
+.fade-in {
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column-reverse;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .about-image-container,
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-image {
+    max-width: 90%;
+    margin-bottom: 2rem;
+    aspect-ratio: auto; /* allow full width on mobile */
+  }
+}

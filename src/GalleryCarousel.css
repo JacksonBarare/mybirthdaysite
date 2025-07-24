@@ -1,0 +1,47 @@
+.carousel-section {
+  padding: 4rem 6rem;
+  background-color: #f9d5c0; /* blends with hero/about */
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-title {
+  font-size: 2rem;
+  color: #3b0060;
+  margin-bottom: 2rem;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.03);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3b0060;
+}
+
+@media (max-width: 768px) {
+  .carousel-section {
+    padding: 2rem;
+  }
+
+  .carousel-image {
+    height: 200px;
+  }
+}
