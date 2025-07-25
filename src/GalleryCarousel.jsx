@@ -70,13 +70,20 @@ export default function GalleryCarousel({ initialIndex = 0, images = imageList }
         ))}
       </Swiper>
 
-      {modalImage && (
-        <div className="modal-overlay" onClick={handleCloseModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img src={modalImage} alt="Zoomed memory" className="modal-image" />
-          </div>
-        </div>
-      )}
+     {modalImage && (
+  <div className="modal-overlay" onClick={handleCloseModal}>
+    <button
+      className="modal-close-button"
+      onClick={handleCloseModal}
+      aria-label="Close"
+    >
+      &times;
+    </button>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <img src={modalImage} alt="Zoomed memory" className="modal-image" />
+    </div>
+  </div>
+)}
     </section>
   );
 }

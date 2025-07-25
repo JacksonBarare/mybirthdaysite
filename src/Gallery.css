@@ -7,8 +7,8 @@
 .gallery-title {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+  margin-bottom: 2rem;
+  color: #3b0060;
 }
 
 .gallery-grid {
@@ -20,7 +20,7 @@
 .gallery-item {
   cursor: pointer;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -37,44 +37,87 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
 }
 
+.back-home-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.back-home-button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #3b0060;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-home-button:hover {
+  background-color: #5a0080;
+}
+
+/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .modal-content {
   position: relative;
-  width: 90%;
-  max-width: 900px;
-  background: #fff;
-  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background-color: white;
+  border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 .modal-close {
   position: absolute;
   top: 10px;
   right: 15px;
-  background: transparent;
-  border: none;
   font-size: 2rem;
+  background: none;
+  border: none;
   color: #333;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .modal-close:hover {
-  color: #ff5555;
+  color: #ff4444;
+}
+
+@media (max-width: 600px) {
+  .gallery-title {
+    font-size: 1.6rem;
+  }
+
+  .modal-content {
+    padding: 0.5rem;
+  }
+
+  .modal-close {
+    font-size: 1.8rem;
+    top: 5px;
+    right: 10px;
+  }
 }

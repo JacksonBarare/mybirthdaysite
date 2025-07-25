@@ -1,6 +1,6 @@
 .carousel-section {
   padding: 4rem 6rem;
-  background-color: #f9d5c0; /* blends with hero/about */
+  background-color: #f9d5c0;
   text-align: center;
   opacity: 0;
   transform: translateY(50px);
@@ -13,38 +13,69 @@
 }
 
 .carousel-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #3b0060;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
 }
 
 .carousel-image {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 
 .carousel-image:hover {
   transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #3b0060;
+  color: hsl(277, 100%, 19%);
+}
+
+@media (max-width: 1024px) {
+  .carousel-section {
+    padding: 3rem 3rem;
+  }
+
+  .carousel-title {
+    font-size: 1.8rem;
+  }
+
+  .carousel-image {
+    height: 250px;
+  }
 }
 
 @media (max-width: 768px) {
   .carousel-section {
-    padding: 2rem;
+    padding: 2.5rem 1.2rem;
+  }
+
+  .carousel-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
   }
 
   .carousel-image {
     height: 200px;
+    border-radius: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .carousel-image {
+    height: 180px;
+  }
+}
+
+/* ====== Modal viewer ====== */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -57,6 +88,7 @@
   align-items: center;
   z-index: 999;
   animation: fadeIn 0.3s ease-in-out;
+  padding: 1rem;
 }
 
 .modal-content {
@@ -64,7 +96,7 @@
   max-height: 90vh;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .modal-image {
@@ -73,6 +105,28 @@
   object-fit: contain;
   border-radius: 12px;
 }
+.modal-close-button {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #3b0060;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.modal-close-button:hover {
+  background: #fff;
+}
+
 
 @keyframes fadeIn {
   from {
@@ -84,4 +138,3 @@
     transform: scale(1);
   }
 }
-

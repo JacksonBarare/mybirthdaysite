@@ -1,44 +1,42 @@
 import React, { useState } from 'react';
-import GalleryCarousel from './GalleryCarousel';
 import './Gallery.css';
 import imageList from './components/imageData';
+import { Link } from 'react-router-dom';
 
 const Gallery = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
 
-  const openModal = (index) => {
-    setCurrentIndex(index);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const openModal = (src) => setSelectedImage(src);
+  const closeModal = () => setSelectedImage(null);
 
   return (
     <div className="gallery-container">
       <h2 className="gallery-title">Photo Gallery</h2>
+
       <div className="gallery-grid">
         {imageList.map((src, index) => (
           <div
             key={index}
             className="gallery-item"
-            onClick={() => openModal(index)}
+            onClick={() => openModal(src)}
             tabIndex={0}
             role="button"
-            aria-label={`Open image ${index + 1}`}
+            aria-label={`View image ${index + 1}`}
           >
             <img src={src} alt={`Gallery ${index + 1}`} className="gallery-image" />
           </div>
         ))}
       </div>
 
-      {isModalOpen && (
+      <div className="back-home-wrapper">
+        <Link to="/" className="back-home-button">← Return to Home</Link>
+      </div>
+
+      {selectedImage && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal} aria-label="Close gallery">&times;</button>
-            <GalleryCarousel initialIndex={currentIndex} />
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>&times;</button>
+            <img src={selectedImage} alt="Full size" className="modal-image" />
           </div>
         </div>
       )}
