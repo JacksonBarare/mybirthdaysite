@@ -1,8 +1,31 @@
 .rsvp-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   padding: 4rem 6rem;
-  background-color: #f4dfd3;;
+  background-color: #f9d5c0b2;
   color: #3b0060;
   font-family: 'Arial', sans-serif;
+}
+
+.rsvp-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  animation: slideshow 20s infinite ease-in-out;
+  z-index: -1;
+}
+
+@keyframes slideshow {
+  0% { background-image: url('/images/fr1.jpeg'); }
+  33% { background-image: url('/images/fr2.jpeg'); }
+  66% { background-image: url('/images/fr6.jpeg'); }
+  100% { background-image: url('/images/fr8.jpeg'); }
 }
 
 .rsvp-title {
@@ -79,6 +102,41 @@
   background-color: #5a0080;
 }
 
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #25D366;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1da851;
+}
+
+.gift-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #f9d5c0;
+  border: 3px solid #3b0060;
+  border-radius: 50%;
+  padding: 0.7rem 1rem;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.gift-float:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
   .rsvp-container {
     flex-direction: column;
@@ -87,5 +145,9 @@
   .location-info,
   .rsvp-form {
     max-width: 100%;
+  }
+
+  .rsvp-section {
+    padding: 2rem;
   }
 }

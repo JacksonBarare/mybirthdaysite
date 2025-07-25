@@ -14,7 +14,7 @@ const HeroSection = () => {
         <button className="hero-button">Get Started</button>
       </div>
       <div className="hero-image-container">
-        <img src="/images/hero-profile.jpg" alt="Hero Profile" className="hero-image" />
+        <img src="/images/about5.jpeg" alt="Hero Profile" className="hero-image" />
       </div>
     </section>
   );

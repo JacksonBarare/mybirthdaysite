@@ -1,35 +1,40 @@
 import './MessagesFromFriends.css';
 
 const messages = [
+ {
+    name: 'Eddy',
+    avatar: '/images/eddy.jpeg',
+    message: "Happy Birthday, sis! Watching you grow into the incredible woman you are makes me proud every day. Let's celebrate you today and always!",
+  },
   {
     name: 'Jack',
-    avatar: '/images/img6.jpg',
-    message: 'Happy Birthday Kabuki! You’re such a bright light in all our lives. Wishing you joy and success always!',
+    avatar: '/images/jb.jpeg',
+    message: "BettyK, every moment with you is magic. You light up my world in ways I never knew possible. Happy Birthday — here’s to your beautiful heart and everything ahead. 💜",
   },
   {
     name: 'Risper',
-    avatar: '/images/img7.jpg',
-    message: 'Hope this year brings you as much happiness as you’ve brought to everyone around you. Enjoy your day!',
+    avatar: '/images/risper.jpeg',
+    message: "Happy Birthday babe! Your energy is unmatched and your laughter is contagious. Keep shining, we love you always!",
   },
   {
     name: 'Sally',
-    avatar: '/images/img8.jpg',
-    message: 'Sending you smiles, love, and cake! Have a fabulous birthday Kabuki!',
+    avatar: '/images/sally.jpeg',
+    message: "You’re such a gem Betty! Life’s better with you in it. Here’s to good vibes, louder laughs, and forever memories!",
   },
   {
     name: 'Chellah',
-    avatar: '/images/about.jpg',
-    message: 'Cheers to another year of awesomeness! You deserve every bit of joy today and always.',
+    avatar: '/images/chellah.jpeg',
+    message: "My girl! Wishing you a day as bold, beautiful, and unforgettable as you are. Let’s make more crazy memories together!",
   },
-    {
-    name: 'claire',
-    avatar: '/images/img5.jpg',
-    message: 'Cheers to another year of awesomeness! You deserve every bit of joy today and always.',
+  {
+    name: 'Claire',
+    avatar: '/images/claire.jpeg',
+    message: "To the realest and sweetest girl I know — Happy Birthday Kabuki! You make friendship feel like home. Love you always!",
   },
-    {
-    name: 'eddy',
-    avatar: '/images/img4.jpg',
-    message: 'Cheers to another year of awesomeness! You deserve every bit of joy today and always.',
+  {
+    name: 'Darlene',
+    avatar: '/images/darlene.jpeg',
+    message: "Happy Birthday sunshine! Your kindness and fun spirit make life better for all of us. Never change!",
   },
 ];
 

@@ -9,6 +9,14 @@
   gap: 3rem;
   flex-wrap: nowrap;
   overflow-x: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-image-container {
@@ -64,20 +72,11 @@
   background-color: #5a0080;
 }
 
-.fade-in {
-  animation: fade 1s ease-in-out;
-}
-
-@keyframes fade {
-  from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
-}
-
 /* Responsive layout */
 @media (max-width: 900px) {
   .about-section {
     flex-direction: column-reverse;
-    padding: 3rem 2rem;
+    padding: 8rem 1rem 3rem; /* ensure it doesn't clash with fixed navbar */
     text-align: center;
   }
 
@@ -87,8 +86,18 @@
   }
 
   .about-image {
-    max-width: 90%;
-    margin-bottom: 2rem;
-    aspect-ratio: auto; /* allow full width on mobile */
+    width: 290px;
+    height: 370px; /* ✅ fixed height to prevent vh shifts */
+    object-fit: cover;
+    aspect-ratio: auto; /* optional now */
+    margin: 0.1rem auto 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
   }
 }

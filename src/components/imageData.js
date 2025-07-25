@@ -1,0 +1,31 @@
+// imageData.js
+const imageList = [
+  '/images/fr1.jpeg',
+  '/images/fr2.jpeg',
+  '/images/fr3.jpeg',
+  '/images/fr4.jpeg',
+  '/images/fr5.jpeg',
+  '/images/fr6.jpeg',
+  '/images/fr7.jpeg',
+  '/images/fr8.jpeg',
+  '/images/fr9.jpeg',
+  '/images/fr10.jpeg',
+  '/images/fr11.jpeg',
+  '/images/fr12.jpeg',
+  '/images/fr13.jpeg',
+  '/images/fr14.jpeg',
+  '/images/fr15.jpeg',
+  '/images/fr16.jpeg',
+  '/images/fr17.jpeg',
+  '/images/fr18.jpeg',
+  '/images/fr19.jpeg',
+  '/images/risper.jpeg',
+  '/images/sally.jpeg',
+  '/images/chellah.jpeg',
+  '/images/claire.jpeg',
+  '/images/darlene.jpeg',
+  '/images/eddy.jpeg',
+  '/images/claire2.jpeg',
+];
+
+export default imageList;

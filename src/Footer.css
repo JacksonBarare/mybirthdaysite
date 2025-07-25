@@ -1,0 +1,75 @@
+.site-footer {
+  background-color: #3b0060;
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-family: 'Arial', sans-serif;
+  border-top: 4px solid #f9d5c0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.love-note p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.love-note span {
+  font-weight: bold;
+  color: #f9d5c0;
+}
+
+/* 💜 Heart Bounce */
+.love-note p::after {
+  content: "💜";
+  display: inline-block;
+  margin-left: 0.5rem;
+  animation: bounce 1s infinite;
+  transform-origin: bottom;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+.developer-cta p {
+  margin: 0.8rem 0 0.5rem;
+  font-size: 1rem;
+  color: #f0e6ff;
+}
+
+.developer-cta a {
+  display: inline-block;
+  margin: 0.3rem 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #f9d5c0;
+  color: #3b0060;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.developer-cta a:hover {
+  background-color: #fff;
+  color: #3b0060;
+  transform: scale(1.05);
+}

@@ -17,21 +17,22 @@
 }
 
 .navbar-bg {
-  background-color: rgba(55, 0, 90, 0.9); /* dark purple with opacity */
+  background-color: rgba(55, 0, 90, 0.9);
   color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-logo {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #fff;
+  z-index: 2000;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
   margin: 0;
   padding: 0;
 }
@@ -48,29 +49,34 @@
   color: #d3aaff;
 }
 
-.navbar-search {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.navbar-search input {
-  padding: 0.3rem 0.6rem;
-  border: none;
-  border-radius: 3px;
-  font-size: 0.9rem;
-}
-
-.navbar-search button {
-  background-color: #3b0060;
-  border: none;
-  color: white;
-  padding: 0.3rem 0.6rem;
-  border-radius: 3px;
+/* Responsive - hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
   cursor: pointer;
-  font-size: 1rem;
+  z-index: 2000;
 }
 
-.navbar-search button:hover {
-  background-color: #5a0080;
+@media (max-width: 768px) {
+  .navbar-links {
+    position: fixed;
+    top: 64px;
+    right: -100%;
+    background-color: rgba(55, 0, 90, 0.95);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    height: 100vh;
+    width: 70%;
+    transition: right 0.3s ease;
+  }
+
+  .navbar-links.open {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
