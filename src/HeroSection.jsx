@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="hero-section" id="home">
       <div className="hero-content">
-        <CountdownTimer targetDate="2025-07-28T00:00:00" />
+        <CountdownTimer targetDate="2026-07-28T00:00:00" />
         <h1><span className="hero-title-bold">Happy Birthday</span><br />Kabuki</h1>
         <p className="hero-description">
           Celebrate your special day with style, joy, and unforgettable memories. Let the party begin!
